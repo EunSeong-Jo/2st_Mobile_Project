@@ -1,0 +1,66 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Mobile_Project" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Brand Colors -->
+        <item name="colorPrimary">@color/dmu_blue</item>
+        <item name="colorPrimaryVariant">@color/sky_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary Colors -->
+        <item name="colorSecondary">@color/alba_orange</item>
+        <item name="colorSecondaryVariant">@color/highlight_yellow</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Background Colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <!-- Error Color -->
+        <item name="colorError">@color/error_red</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/dmu_blue</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="Theme.Mobile_Project" parent="Base.Theme.Mobile_Project" />
+
+    <!-- Button Styles -->
+    <style name="Widget.AlbaDae.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/dmu_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/radius_round</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textSize">@dimen/text_button</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.AlbaDae.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/dmu_blue</item>
+        <item name="android:textColor">@color/dmu_blue</item>
+        <item name="cornerRadius">@dimen/radius_round</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textSize">@dimen/text_button</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="Widget.AlbaDae.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/radius_large</item>
+        <item name="cardElevation">@dimen/elevation_1</item>
+        <item name="contentPadding">@dimen/spacing_m</item>
+    </style>
+
+    <!-- Text Input Style -->
+    <style name="Widget.AlbaDae.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/dmu_blue</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_medium</item>
+    </style>
+</resources>

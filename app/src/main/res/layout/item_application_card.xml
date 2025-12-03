@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_m"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Status Indicator -->
+        <View
+            android:id="@+id/view_status_indicator"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/dmu_blue" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_m">
+
+            <!-- Company Name -->
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CU 구로점"
+                android:textSize="@dimen/text_body1"
+                android:textColor="@color/text_secondary" />
+
+            <!-- Job Title -->
+            <TextView
+                android:id="@+id/tv_job_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[급구] 편의점 알바 구합니다"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="@dimen/spacing_xs" />
+
+            <!-- Info Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/spacing_m">
+
+                <!-- Applied Date -->
+                <TextView
+                    android:id="@+id/tv_applied_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2024-03-15"
+                    android:textSize="@dimen/text_caption"
+                    android:textColor="@color/text_secondary" />
+
+                <!-- Status -->
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대기 중"
+                    android:textSize="@dimen/text_body2"
+                    android:textColor="@color/dmu_blue"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

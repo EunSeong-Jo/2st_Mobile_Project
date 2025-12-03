@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing System (4dp Grid) -->
+    <dimen name="spacing_xxs">4dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+    <dimen name="spacing_s">12dp</dimen>
+    <dimen name="spacing_m">16dp</dimen>
+    <dimen name="spacing_l">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_h1">28sp</dimen>
+    <dimen name="text_h2">24sp</dimen>
+    <dimen name="text_h3">20sp</dimen>
+    <dimen name="text_body1">16sp</dimen>
+    <dimen name="text_body2">14sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_button">16sp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="radius_small">4dp</dimen>
+    <dimen name="radius_medium">8dp</dimen>
+    <dimen name="radius_large">12dp</dimen>
+    <dimen name="radius_xlarge">16dp</dimen>
+    <dimen name="radius_round">24dp</dimen>
+    <dimen name="radius_circle">999dp</dimen>
+
+    <!-- Component Heights -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="input_height">56dp</dimen>
+    <dimen name="bottom_nav_height">68dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="card_min_height">120dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_small">20dp</dimen>
+    <dimen name="icon_medium">24dp</dimen>
+    <dimen name="icon_large">32dp</dimen>
+    <dimen name="icon_xlarge">48dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_0">0dp</dimen>
+    <dimen name="elevation_1">2dp</dimen>
+    <dimen name="elevation_2">4dp</dimen>
+    <dimen name="elevation_3">8dp</dimen>
+    <dimen name="elevation_4">16dp</dimen>
+    <dimen name="elevation_5">24dp</dimen>
+</resources>

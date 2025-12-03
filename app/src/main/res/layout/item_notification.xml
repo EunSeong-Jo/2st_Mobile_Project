@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_m"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Unread Indicator -->
+    <View
+        android:id="@+id/view_unread_indicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/spacing_m"
+        android:background="@drawable/circle_shape"
+        android:backgroundTint="@color/dmu_blue"
+        android:visibility="visible" />
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_notification_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="지원 결과 알림"
+            android:textSize="@dimen/text_body1"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/tv_notification_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CU 구로점에서 지원하신 공고의 결과가 나왔습니다."
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/text_secondary"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tv_notification_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2시간 전"
+            android:textSize="@dimen/text_caption"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+    </LinearLayout>
+
+</LinearLayout>

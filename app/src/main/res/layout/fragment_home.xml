@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header with Gradient Background -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gradient_background"
+            android:padding="@dimen/spacing_l">
+
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/tv_greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕하세요, OOO님! 👋"
+                android:textSize="@dimen/text_h2"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/tv_greeting_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/greeting_message"
+                android:textSize="@dimen/text_body2"
+                android:textColor="@color/white"
+                android:alpha="0.9"
+                android:layout_marginTop="@dimen/spacing_xs" />
+
+            <!-- Search Bar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_l"
+                app:cardCornerRadius="@dimen/radius_round"
+                app:cardElevation="@dimen/elevation_1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_m"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_medium"
+                        android:layout_height="@dimen/icon_medium"
+                        android:src="@android:drawable/ic_menu_search"
+                        android:contentDescription="검색"
+                        android:tint="@color/text_secondary" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/search_hint"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginStart="@dimen/spacing_m" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_m">
+
+            <!-- Nearby Jobs Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/spacing_m">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/nearby_jobs"
+                    android:textSize="@dimen/text_h3"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/tv_see_more_nearby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_more"
+                    android:textSize="@dimen/text_body2"
+                    android:textColor="@color/dmu_blue"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/spacing_xs" />
+
+            </LinearLayout>
+
+            <!-- Nearby Places RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_nearby_places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/spacing_xs"
+                android:paddingEnd="@dimen/spacing_xs"
+                tools:listitem="@layout/item_nearby_place" />
+
+            <!-- Recommended Jobs Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/spacing_xl">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/recommended_jobs"
+                    android:textSize="@dimen/text_h3"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/tv_see_more_recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_more"
+                    android:textSize="@dimen/text_body2"
+                    android:textColor="@color/dmu_blue"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/spacing_xs" />
+
+            </LinearLayout>
+
+            <!-- Recommended Jobs RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recommended_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_job_card" />
+
+            <!-- Upcoming Schedule Section (Student Only) -->
+            <LinearLayout
+                android:id="@+id/layout_upcoming_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/spacing_xl"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upcoming_schedule"
+                    android:textSize="@dimen/text_h3"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Schedule Items -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.AlbaDae.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_m">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_m">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="오늘 14:00 데이터베이스"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="내일 18:00 편의점 알바"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="@dimen/spacing_xs" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.AlbaDae.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_xs"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_m">
+
+        <!-- Company Name -->
+        <TextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="회사명"
+            android:textSize="@dimen/text_caption"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_rating" />
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐4.5"
+            android:textSize="@dimen/text_caption"
+            android:textColor="@color/highlight_yellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_bookmark"
+            android:layout_marginEnd="@dimen/spacing_xs" />
+
+        <!-- Bookmark Icon -->
+        <ImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_width="@dimen/icon_small"
+            android:layout_height="@dimen/icon_small"
+            android:src="@android:drawable/btn_star_big_off"
+            android:contentDescription="북마크"
+            android:tint="@color/text_secondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Job Title -->
+        <TextView
+            android:id="@+id/tv_job_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[급구] 편의점 알바 구합니다"
+            android:textSize="@dimen/text_body1"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/tv_company_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+        <!-- Salary -->
+        <TextView
+            android:id="@+id/tv_salary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="💰 시급 12,000원"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/alba_orange"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toBottomOf="@id/tv_job_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/spacing_s" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="📍 서울 구로구"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/tv_salary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_work_time"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginEnd="@dimen/spacing_m" />
+
+        <!-- Work Time -->
+        <TextView
+            android:id="@+id/tv_work_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏰ 주 3일, 4시간"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/tv_salary"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

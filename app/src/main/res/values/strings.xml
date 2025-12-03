@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">알바대</string>
+    <string name="app_name_en">Alba-Dae</string>
+    <string name="app_tagline">동양미래대 학생의 알바 매칭 플랫폼</string>
+
+    <!-- User Types -->
+    <string name="user_type_student">재학생</string>
+    <string name="user_type_employer">고용주</string>
+
+    <!-- Authentication -->
+    <string name="login">로그인</string>
+    <string name="signup">회원가입</string>
+    <string name="logout">로그아웃</string>
+    <string name="email">이메일</string>
+    <string name="password">비밀번호</string>
+    <string name="password_confirm">비밀번호 확인</string>
+    <string name="auto_login">자동 로그인</string>
+    <string name="find_id">아이디 찾기</string>
+    <string name="find_password">비밀번호 찾기</string>
+
+    <!-- User Type Selection -->
+    <string name="select_user_type">회원 유형 선택</string>
+    <string name="how_to_use">어떻게 이용하시나요?</string>
+    <string name="student_verification">재학생 인증</string>
+    <string name="student_verification_desc">학교 이메일 인증</string>
+    <string name="student_feature_1">✓ 시간표 관리</string>
+    <string name="student_feature_2">✓ 학교 공지 알림</string>
+    <string name="employer_verification">고용주 인증</string>
+    <string name="employer_verification_desc">사업자등록번호</string>
+    <string name="next_step">다음 단계</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">홈</string>
+    <string name="nav_jobs">채용공고</string>
+    <string name="nav_schedule">시간표</string>
+    <string name="nav_notifications">알림</string>
+    <string name="nav_my_page">마이페이지</string>
+
+    <!-- Home -->
+    <string name="greeting">안녕하세요, %1$s님!</string>
+    <string name="greeting_message">오늘도 좋은 알바 찾아봐요</string>
+    <string name="search_hint">원하는 알바를 검색해보세요</string>
+    <string name="nearby_jobs">내 주변 알바</string>
+    <string name="recommended_jobs">추천 알바</string>
+    <string name="upcoming_schedule">다가오는 일정</string>
+    <string name="see_more">더보기</string>
+
+    <!-- Job Posting -->
+    <string name="all_jobs">전체</string>
+    <string name="filter">필터</string>
+    <string name="hourly_wage">시급 %1$s원</string>
+    <string name="location_prefix">📍</string>
+    <string name="time_prefix">⏰</string>
+    <string name="apply">지원하기</string>
+    <string name="job_detail">공고 상세</string>
+    <string name="job_description">업무 내용</string>
+    <string name="qualifications">자격 요건</string>
+    <string name="preferences">우대 사항</string>
+    <string name="reviews">리뷰</string>
+
+    <!-- Schedule (Student) -->
+    <string name="schedule">시간표</string>
+    <string name="week_view">주간</string>
+    <string name="month_view">월간</string>
+    <string name="add_schedule">일정 추가</string>
+    <string name="class_schedule">수업</string>
+    <string name="work_schedule">알바</string>
+    <string name="schedule_conflict">일정 겹침 경고</string>
+    <string name="schedule_conflict_message">이미 등록된 일정과 겹칩니다.</string>
+
+    <!-- Notifications -->
+    <string name="notifications">알림</string>
+    <string name="tab_all">소통</string>
+    <string name="tab_law">법</string>
+    <string name="tab_news">뉴스</string>
+    <string name="notification_category_work">알바</string>
+    <string name="notification_category_school">학교</string>
+    <string name="application_approved">지원 승인됨</string>
+    <string name="application_rejected">지원 거절됨</string>
+    <string name="school_announcement">학교 공지</string>
+
+    <!-- My Page -->
+    <string name="my_page">내 정보</string>
+    <string name="edit_profile">프로필 수정</string>
+    <string name="my_activity">내 활동</string>
+    <string name="application_history">지원 내역</string>
+    <string name="bookmarks">관심 공고</string>
+    <string name="work_history">근무 이력</string>
+    <string name="my_reviews">내가 쓴 리뷰</string>
+    <string name="settings">설정</string>
+    <string name="notification_settings">알림 설정</string>
+    <string name="account_management">계정 관리</string>
+    <string name="privacy_policy">개인정보 처리방침</string>
+    <string name="terms_of_service">서비스 이용약관</string>
+    <string name="version_info">버전 정보</string>
+
+    <!-- Common -->
+    <string name="save">저장</string>
+    <string name="cancel">취소</string>
+    <string name="delete">삭제</string>
+    <string name="edit">수정</string>
+    <string name="confirm">확인</string>
+    <string name="back">뒤로</string>
+    <string name="close">닫기</string>
+    <string name="loading">로딩 중...</string>
+    <string name="error">오류가 발생했습니다</string>
+    <string name="success">성공</string>
+</resources>

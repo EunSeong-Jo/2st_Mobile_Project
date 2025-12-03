@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragment.ScheduleFragment">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_background"
+        android:padding="@dimen/spacing_l">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="시간표"
+                android:textSize="@dimen/text_h2"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_schedule"
+                style="@style/Widget.Material3.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추가"
+                android:textColor="@color/white"
+                app:icon="@android:drawable/ic_input_add"
+                app:iconTint="@color/white"
+                app:backgroundTint="@android:color/transparent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜를 선택하여 해당 요일의 일정을 확인하세요"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/white"
+            android:alpha="0.9"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+    </LinearLayout>
+
+    <!-- Calendar -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.AlbaDae.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_m">
+
+        <CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dateTextAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:weekDayTextAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Selected Date Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_m"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_selected_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2025년 1월 11일 (토)"
+            android:textSize="@dimen/text_h3"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/tv_schedule_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 0개"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- Legend -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_m"
+        android:paddingBottom="@dimen/spacing_m"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="@dimen/spacing_l">
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@color/schedule_class" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수업"
+                android:textSize="@dimen/text_body2"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="@dimen/spacing_xs" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@color/schedule_work" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="알바"
+                android:textSize="@dimen/text_body2"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="@dimen/spacing_xs" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_conflict_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠️ 일정 겹침"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/error_red"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Schedule List for Selected Date -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_schedule_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/spacing_m"
+        android:paddingBottom="@dimen/spacing_m" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/spacing_xxl"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선택한 날짜에 일정이 없습니다"
+            android:textSize="@dimen/text_body1"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우측 상단 + 버튼을 눌러 일정을 추가하세요"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.AlbaDae.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_xs"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_m">
+
+        <!-- Color Indicator -->
+        <View
+            android:id="@+id/view_color_indicator"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="@color/schedule_class"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Day of Week -->
+        <TextView
+            android:id="@+id/tv_day_of_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월"
+            android:textSize="@dimen/text_h3"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/spacing_m"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_color_indicator" />
+
+        <!-- Time Range -->
+        <TextView
+            android:id="@+id/tv_time_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00 ~ 12:00"
+            android:textSize="@dimen/text_body2"
+            android:textColor="@color/text_secondary"
+            android:layout_marginStart="@dimen/spacing_m"
+            app:layout_constraintTop_toBottomOf="@id/tv_day_of_week"
+            app:layout_constraintStart_toEndOf="@id/view_color_indicator"
+            android:layout_marginTop="2dp" />
+
+        <!-- Schedule Title -->
+        <TextView
+            android:id="@+id/tv_schedule_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="데이터베이스"
+            android:textSize="@dimen/text_body1"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_day_of_week"
+            app:layout_constraintEnd_toStartOf="@id/iv_menu"
+            android:layout_marginStart="@dimen/spacing_l" />
+
+        <!-- Location (optional) -->
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="📍 본관 301호"
+            android:textSize="@dimen/text_caption"
+            android:textColor="@color/text_secondary"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/tv_schedule_title"
+            app:layout_constraintStart_toEndOf="@id/tv_day_of_week"
+            app:layout_constraintEnd_toStartOf="@id/iv_menu"
+            android:layout_marginStart="@dimen/spacing_l"
+            android:layout_marginTop="2dp" />
+
+        <!-- Menu Icon (Edit/Delete) -->
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:src="@android:drawable/ic_menu_more"
+            android:contentDescription="메뉴"
+            android:tint="@color/text_secondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Conflict Warning (optional) -->
+        <TextView
+            android:id="@+id/tv_conflict_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠️ 일정 겹침"
+            android:textSize="@dimen/text_caption"
+            android:textColor="@color/error_red"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_location"
+            app:layout_constraintStart_toEndOf="@id/tv_day_of_week"
+            android:layout_marginStart="@dimen/spacing_l"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragment.MyPageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header with Gradient -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gradient_background"
+            android:padding="@dimen/spacing_l">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마이페이지"
+                android:textSize="@dimen/text_h2"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium" />
+
+        </LinearLayout>
+
+        <!-- User Profile Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.AlbaDae.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_m">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_l"
+                android:gravity="center_vertical">
+
+                <!-- Profile Image Placeholder -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:cardCornerRadius="32dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/light_blue">
+
+                    <TextView
+                        android:id="@+id/tv_profile_initial"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="홍"
+                        android:textSize="@dimen/text_h2"
+                        android:textColor="@color/dmu_blue"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- User Info -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/spacing_l">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="홍길동"
+                        android:textSize="@dimen/text_h3"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/tv_user_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="재학생"
+                        android:textSize="@dimen/text_body2"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="@dimen/spacing_xs" />
+
+                    <TextView
+                        android:id="@+id/tv_user_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="컴퓨터정보공학과 · 2학년"
+                        android:textSize="@dimen/text_body2"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="2dp" />
+
+                </LinearLayout>
+
+                <!-- Edit Button -->
+                <ImageView
+                    android:id="@+id/iv_edit_profile"
+                    android:layout_width="@dimen/icon_medium"
+                    android:layout_height="@dimen/icon_medium"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:contentDescription="프로필 편집"
+                    android:tint="@color/text_secondary" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/spacing_m">
+
+            <!-- My Activity Section (Student) -->
+            <TextView
+                android:id="@+id/tv_section_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 활동"
+                android:textSize="@dimen/text_caption"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:layout_marginBottom="@dimen/spacing_s"
+                android:layout_marginStart="@dimen/spacing_s" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.AlbaDae.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:divider="@drawable/divider_horizontal"
+                    android:showDividers="middle">
+
+                    <!-- Bookmark -->
+                    <LinearLayout
+                        android:id="@+id/menu_bookmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_l"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="북마크"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small"
+                            android:layout_height="@dimen/icon_small"
+                            android:src="@android:drawable/ic_menu_more"
+                            android:rotation="270"
+                            android:tint="@color/text_secondary"
+                            android:contentDescription="이동" />
+
+                    </LinearLayout>
+
+                    <!-- Application History (Student) -->
+                    <LinearLayout
+                        android:id="@+id/menu_application_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_l"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="지원 내역"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small"
+                            android:layout_height="@dimen/icon_small"
+                            android:src="@android:drawable/ic_menu_more"
+                            android:rotation="270"
+                            android:tint="@color/text_secondary"
+                            android:contentDescription="이동" />
+
+                    </LinearLayout>
+
+                    <!-- My Job Postings (Employer) -->
+                    <LinearLayout
+                        android:id="@+id/menu_my_postings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_l"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="내 공고 관리"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small"
+                            android:layout_height="@dimen/icon_small"
+                            android:src="@android:drawable/ic_menu_more"
+                            android:rotation="270"
+                            android:tint="@color/text_secondary"
+                            android:contentDescription="이동" />
+
+                    </LinearLayout>
+
+                    <!-- My Reviews -->
+                    <LinearLayout
+                        android:id="@+id/menu_my_reviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_l"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="내가 쓴 리뷰"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small"
+                            android:layout_height="@dimen/icon_small"
+                            android:src="@android:drawable/ic_menu_more"
+                            android:rotation="270"
+                            android:tint="@color/text_secondary"
+                            android:contentDescription="이동" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Settings Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정"
+                android:textSize="@dimen/text_caption"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="@dimen/spacing_l"
+                android:layout_marginBottom="@dimen/spacing_s"
+                android:layout_marginStart="@dimen/spacing_s" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.AlbaDae.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:divider="@drawable/divider_horizontal"
+                    android:showDividers="middle">
+
+                    <!-- Account Settings -->
+                    <LinearLayout
+                        android:id="@+id/menu_account_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_l"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="계정 설정"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small"
+                            android:layout_height="@dimen/icon_small"
+                            android:src="@android:drawable/ic_menu_more"
+                            android:rotation="270"
+                            android:tint="@color/text_secondary"
+                            android:contentDescription="이동" />
+
+                    </LinearLayout>
+
+                    <!-- Notification Settings -->
+                    <LinearLayout
+                        android:id="@+id/menu_notification_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_l"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="알림 설정"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small"
+                            android:layout_height="@dimen/icon_small"
+                            android:src="@android:drawable/ic_menu_more"
+                            android:rotation="270"
+                            android:tint="@color/text_secondary"
+                            android:contentDescription="이동" />
+
+                    </LinearLayout>
+
+                    <!-- Customer Service -->
+                    <LinearLayout
+                        android:id="@+id/menu_customer_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_l"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="고객센터"
+                            android:textSize="@dimen/text_body1"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small"
+                            android:layout_height="@dimen/icon_small"
+                            android:src="@android:drawable/ic_menu_more"
+                            android:rotation="270"
+                            android:tint="@color/text_secondary"
+                            android:contentDescription="이동" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="로그아웃"
+                android:textColor="@color/error_red"
+                android:layout_marginTop="@dimen/spacing_l"
+                android:layout_marginBottom="@dimen/spacing_xl" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

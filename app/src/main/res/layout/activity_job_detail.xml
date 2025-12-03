@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.JobDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/dmu_blue"
+            app:title="채용공고"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_l">
+
+            <!-- Company Info -->
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CU 구로점"
+                android:textSize="@dimen/text_h2"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Job Title -->
+            <TextView
+                android:id="@+id/tv_job_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="[급구] 편의점 알바 구합니다"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="@dimen/spacing_m" />
+
+            <!-- Salary -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/spacing_l"
+                android:padding="@dimen/spacing_m"
+                android:background="@color/blue_50">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💰 시급"
+                    android:textSize="@dimen/text_body1"
+                    android:textColor="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tv_salary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12,000원"
+                    android:textSize="@dimen/text_body1"
+                    android:textColor="@color/alba_orange"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Info Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/spacing_l">
+
+                <!-- Location -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/spacing_m">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="📍 위치"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="서울 구로구"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_primary" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Work Time -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/spacing_m">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="⏰ 근무시간"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tv_work_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="주 3일, 4시간"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_primary" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!-- Work Days -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/spacing_m">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="📅 근무요일"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tv_work_days"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="월, 수, 금"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_primary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상세 설명"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="@dimen/spacing_xl" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="편의점 근무 경험이 있으신 분을 우대합니다.\n성실하고 책임감 있는 분을 찾습니다."
+                android:textSize="@dimen/text_body1"
+                android:textColor="@color/text_primary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="@dimen/spacing_m" />
+
+            <!-- Requirements -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="우대사항"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="@dimen/spacing_xl" />
+
+            <TextView
+                android:id="@+id/tv_requirements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• 편의점 근무 경험\n• 장기 근무 가능자"
+                android:textSize="@dimen/text_body1"
+                android:textColor="@color/text_primary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="@dimen/spacing_m" />
+
+            <!-- Spacer for bottom buttons -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:id="@+id/layout_bottom_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_m"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_bookmark"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="북마크"
+            app:icon="@android:drawable/btn_star_big_off" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply"
+            style="@style/Widget.AlbaDae.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="지원하기"
+            android:layout_marginStart="@dimen/spacing_m" />
+
+    </LinearLayout>
+
+    <!-- Edit/Delete Buttons (for employer) -->
+    <LinearLayout
+        android:id="@+id/layout_employer_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_m"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_edit"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수정"
+            android:layout_marginEnd="@dimen/spacing_s" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="삭제"
+            android:textColor="@color/error_red"
+            app:strokeColor="@color/error_red" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

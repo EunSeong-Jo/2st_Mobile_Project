@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ApplicationFormActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dmu_blue"
+        app:title="지원하기"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_l">
+
+            <!-- Job Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginBottom="@dimen/spacing_l">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_m">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지원 공고"
+                        android:textSize="@dimen/text_caption"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tv_company_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CU 구로점"
+                        android:textSize="@dimen/text_body1"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginTop="@dimen/spacing_xs" />
+
+                    <TextView
+                        android:id="@+id/tv_job_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[급구] 편의점 알바 구합니다"
+                        android:textSize="@dimen/text_h3"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginTop="@dimen/spacing_xs" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Resume -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📝 이력서"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="학력, 경력, 자격증 등을 작성해주세요 (최소 50자)"
+                android:textSize="@dimen/text_caption"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="@dimen/spacing_xs" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.AlbaDae.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:hint="이력서 내용">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_resume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="8"
+                    android:maxLines="15"
+                    android:gravity="top" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Cover Letter -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✍️ 자기소개서"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="@dimen/spacing_xl" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지원 동기, 강점 등을 작성해주세요 (최소 100자)"
+                android:textSize="@dimen/text_caption"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="@dimen/spacing_xs" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.AlbaDae.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:hint="자기소개서 내용">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_cover_letter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="10"
+                    android:maxLines="20"
+                    android:gravity="top" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Submit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_submit"
+                style="@style/Widget.AlbaDae.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="지원하기"
+                android:layout_marginTop="@dimen/spacing_xl" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

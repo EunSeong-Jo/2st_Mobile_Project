@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.UserTypeSelectionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_l">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_user_type"
+            android:textSize="@dimen/text_h1"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/spacing_xxl" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_to_use"
+            android:textSize="@dimen/text_body1"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/spacing_xs" />
+
+        <!-- Student Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_student"
+            style="@style/Widget.AlbaDae.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:strokeColor="@color/dmu_blue"
+            app:strokeWidth="2dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/spacing_xl">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_l"
+                android:gravity="center">
+
+                <!-- Icon -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎓"
+                    android:textSize="48sp"
+                    android:layout_marginBottom="@dimen/spacing_m" />
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/student_verification"
+                    android:textSize="@dimen/text_h2"
+                    android:textColor="@color/dmu_blue"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="@dimen/spacing_xs" />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/student_verification_desc"
+                    android:textSize="@dimen/text_body2"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="@dimen/spacing_m" />
+
+                <!-- Features -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/spacing_s">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/student_feature_1"
+                        android:textSize="@dimen/text_body2"
+                        android:textColor="@color/text_primary"
+                        android:drawablePadding="@dimen/spacing_xs" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/student_feature_2"
+                        android:textSize="@dimen/text_body2"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:drawablePadding="@dimen/spacing_xs" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Employer Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_employer"
+            style="@style/Widget.AlbaDae.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:strokeColor="@color/alba_orange"
+            app:strokeWidth="2dp"
+            app:layout_constraintTop_toBottomOf="@id/card_student"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/spacing_m">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_l"
+                android:gravity="center">
+
+                <!-- Icon -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💼"
+                    android:textSize="48sp"
+                    android:layout_marginBottom="@dimen/spacing_m" />
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/employer_verification"
+                    android:textSize="@dimen/text_h2"
+                    android:textColor="@color/alba_orange"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="@dimen/spacing_xs" />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/employer_verification_desc"
+                    android:textSize="@dimen/text_body2"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="@dimen/spacing_m" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Next Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            style="@style/Widget.AlbaDae.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next_step"
+            android:enabled="false"
+            app:layout_constraintTop_toBottomOf="@id/card_employer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:layout_marginBottom="@dimen/spacing_l" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
